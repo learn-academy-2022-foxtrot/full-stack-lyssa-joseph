@@ -20,8 +20,7 @@ class MainController < ApplicationController
     end
 
     def destroy
-        @blog = Blog.find(params[:id])
-        @blog.destroy
+        @blog = Blog.find(params[:id]).destroy
         redirect_to blogs_path
     end
 
