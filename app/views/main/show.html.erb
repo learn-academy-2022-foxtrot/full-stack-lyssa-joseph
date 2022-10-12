@@ -4,5 +4,10 @@
    <%= "Here is the content: #{@blog.content}." %>
 </p>
 <p>
+    <%= link_to 'Delete this Pizza Planet Post', blog_path(@blog), data:{
+        turbo_method: :delete, turbo_confirm: "Are you Sure?"
+    } %>
+</p>
+<p>
     <%= link_to 'Back to Pizza Planet', blogs_path %>
 </p>
