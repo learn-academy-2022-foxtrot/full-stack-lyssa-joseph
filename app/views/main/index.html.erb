@@ -1,0 +1,16 @@
+<h1>Welcome to Pizza Planet!</h1>
+<h2>Best Pizza Blog EVER</h2>
+
+<ul>
+    <% @blogs.each do |blog| %>
+    <li>
+        <%= link_to blog.title, blog_path(blog) %>
+    </li>
+    <% end %>
+</ul>
+
+<br>
+
+<p>
+    <%= link_to 'Add a NEW Blog', new_blog_path %>
+</p>
