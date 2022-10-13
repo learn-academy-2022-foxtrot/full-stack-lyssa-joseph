@@ -13,7 +13,7 @@ class MainController < ApplicationController
     end
 
     def create
-        @blog = Blog.create((blog_params))
+        @blog = Blog.create(blog_params)
         if @blog.valid?
             redirect_to blogs_path
         end
@@ -23,8 +23,6 @@ class MainController < ApplicationController
         @blog = Blog.find(params[:id])
         if @blog.update(blog_params)
             redirect_to @blog
-        else
-            redirect_to blogs_path
         end
     end
     
