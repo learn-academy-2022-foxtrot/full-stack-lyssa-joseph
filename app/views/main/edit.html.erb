@@ -1,16 +1,21 @@
-<h3>Update Pizza Post</h3>
-<%= @msg %>
-<%= form_with model: @blog do |form| %>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-    <br>
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-    <br>
-    <%= form.submit 'Update Pizza Post' %>
-<% end %>
+<div class = "header">
+    <h3>Update Pizza Post</h3>
+</div>
 
-<br>
-<p>
-    <%= link_to 'Back to Home', blogs_path %>
-</p>
+<div class = "post">
+    <%= @msg %>
+    <%= form_with model: @blog do |form| %>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+        <br>
+        <%= form.label :content %>
+        <%= form.text_field :content %>
+        <br>
+        <%= form.submit 'Update Pizza Post' %>
+    <% end %>
+
+    <br>
+    <p>
+        <%= link_to 'Back to Home', blogs_path %>
+    </p>
+</div>
