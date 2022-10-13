@@ -18,13 +18,27 @@ class MainController < ApplicationController
             redirect_to blogs_path
         end
     end
-
+    
+    def update
+        @blog = Blog.find(params[:id])
+        if @blog.update(blog_params)
+            redirect_to @blog
+        else
+            redirect_to blogs_path
+        end
+    end
+    
+    def edit
+        @blog = Blog.find(params[:id])
+    end
+    
     def destroy
         @blog = Blog.find(params[:id]).destroy
         redirect_to blogs_path
     end
 
     private
+
     def blog_params
         params.require(:blog).permit(:title, :content)
     end
