@@ -1,15 +1,20 @@
-<h1>Welcome to Pizza Planet!</h1>
-<h2>Best Pizza Blog EVER</h2>
-<ul>
+<div class = "header">
+    <h1>Welcome to Pizza Planet!</h1>
+    <h2>Best Pizza Blog EVER</h2>
+</div>
+
+<div class = "pizza">
+</div>
+
+<div style="width:250px;height:300px;line-height:3em;overflow:scroll;padding:5px;" class = "links">
+    <h3>Latest Pizza Posts</h3>
     <% @blogs.each do |blog| %>
-    <li>
         <%= link_to blog.title, blog_path(blog) %>
-    </li>
+        <br>
     <% end %>
-</ul>
+    <p>
+        <%= link_to 'Add a NEW Blog', new_blog_path %>
+    </p>
+</div>
 
-<br>
-
-<p>
-    <%= link_to 'Add a NEW Blog', new_blog_path %>
-</p>
+        
