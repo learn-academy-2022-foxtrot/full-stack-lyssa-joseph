@@ -38,10 +38,8 @@ class MainController < ApplicationController
     end
 
     private
-
     def blog_params
         params.require(:blog).permit(:title, :content)
     end
-    
 
 end
